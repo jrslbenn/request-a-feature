@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Request a Feature</title>
+</head>
+
+<body>
+    <h3>Feature Requests</h3>
+    <form data-bind="submit: addFeatureRequest">
+        <div>
+            Title: <input data-bind="value: newFeatureRequestTitle" placeholder="What's the title of the feature?" />
+        </div>
+        <div>
+            Description: <textarea data-bind="value: newFeatureRequestDesc" placeholder="Describe the feature."></textarea>
+        </div>
+        <div>
+            Client: <textarea data-bind="value: newFeatureRequestClient"></textarea>
+        </div>
+        <div>
+            Client priority: <textarea data-bind="value: newFeatureRequestClientPriority"></textarea>
+        </div>
+        <div>
+            Product Area: <textarea data-bind="value: newFeatureRequestProductArea"></textarea>
+        </div>
+        <div>
+            Target Date: <textarea data-bind="value: newFeatureRequestTargetDate"></textarea>
+        </div>
+        <button type="submit">Submit feature request</button>
+    </form>
+    <ul data-bind="foreach: featureRequests, visible: featureRequests().length > 1">
+        <li>
+            <p data-bind="text: title"></p>
+            <p data-bind="text: description"></p>
+        </li>
+    </ul>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
