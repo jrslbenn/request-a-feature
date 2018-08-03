@@ -1,4 +1,4 @@
-flask-knockout-example
+request-a-feature
 ======================
 
-A very quick, simple example of using Flask and Knockout.js
+A simple app for requesting features to be developed.
