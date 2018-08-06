@@ -64,7 +64,7 @@ function FeatureRequestListViewModel() {
                 return;
             },
             error: function() {
-                console.log(error);
+                alert("Something was wrong with your form, try again.")
                 return console.log("Failed");
             }
         });
