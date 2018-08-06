@@ -9,6 +9,3 @@ CREATE TABLE feature_requests (
   target_dt TIMESTAMP NOT NULL,
   created_dt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-
-INSERT INTO feature_requests (title, description, client, client_priority, product_area, target_dt)
-VALUES ("Create simple application", "Put together a simple application using Flask and Knockout.js", "Client A", 1, "Policies", "2018-08-05");
